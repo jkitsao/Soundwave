@@ -27,7 +27,7 @@ export const generateRandomSong = (catalogue: Array<any>): any => {
   };
   
 /**
- * Retrieves the bit rate of a given song using ffprobe.
+ * Retrieves the bit rate of a given song using ffprobe package.
  * 
  * @param {any} song - The song for which to retrieve the bit rate.
  * @returns {Promise<number|string>} A promise that resolves to the bit rate of the song, or a default value if an error occurs.
