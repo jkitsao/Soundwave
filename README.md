@@ -2,56 +2,65 @@
 
 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTowEvl_bWzq4ieK-UU1kzqCbLrB8e1FvPT4eIDcFFFJsAjbYyGMDS1uaCRnqJ7I3jkqGI&usqp=CAU'>
 
-This project demonstrates how to build an online radio using Node.js streams. It utilizes various modules and libraries to handle streaming, random song selection, and broadcasting to multiple listeners.
+# Online Radio with Node.js Streams
 
-By leveraging Node.js streams, the backend was able to handle multiple audio connections simultaneously, allowing for a scalable and responsive online radio platform. This meant that the project could accommodate a large number of concurrent listeners without compromising the quality or performance of the audio streams.
-Node.js streams provided efficient data transmission, scalability, and flexibility in audio format support, enabling a seamless and customizable online radio experience for users.
+This project is an online radio implementation using Node.js streams. It allows you to stream audio data to connected clients in real-time, enabling them to listen to the radio broadcast. The project is built with TypeScript and leverages the power of Node.js streams for efficient data processing.
 
 ### Features
+
+---
 
 - Random Song Selection: The application randomly selects songs from a catalog, which includes both regular and alternative songs, and plays them in a loop.
 - Streaming to Listeners: Listeners can connect to the server and stream the currently playing song in real time.
 - Throttling: The streaming is throttled based on the bitrate of the song to ensure smooth playback and efficient data transfer.
 - Now Playing Information: The server provides an endpoint to retrieve the currently playing song, along with the number of current listeners.
 
-### Prerequisites
+## Installation
 
-- Node.js and npm should be installed on your system.
+1.  Clone the repository:
 
-### Installation
+    bashCopy code
 
-1.  Clone the repository: `git clone [<repository-url>](https://github.com/jkitsao/xfmservice.git)`
-2.  Navigate to the project directory: `cd online-radio-nodejs-streams`
-3.  Install the dependencies: `yarn add`
+    `git clone https://github.com/jkitsao/soundwave.git`
 
-### Usage
+2.  Navigate to the project directory:
 
-1.  Start the server: `node server.js`
-2.  Open a web browser and visit `http://localhost:8080` to confirm that the server is up and running.
-3.  Connect to the online radio by opening the streaming URL `http://localhost:8080/listen` in a media player that supports streaming.
+    bash
 
-### API Endpoints
+    `cd soundwave`
 
-- `GET /listen`: Connect to the streaming endpoint to listen to the currently playing song.
-- `GET /playing`: Retrieve information about the currently playing song, including the number of current listeners.
+3.  Install the dependencies:
 
-### Customization
+    bash
 
-- Catalogue: You can customize the songs in the `DB.catalogue` and `alt_catalogue` arrays in the `db/db.js` and `db/alternative.js` files, respectively.
-- Port: The server runs on port 8080 by default. You can modify the `PORT` variable in the `server.js` file to use a different port.
+    `npm install`
 
-### License
+4.  Start the server:
 
-This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+    bash
 
-### Acknowledgements
+    `npm start`
 
-This project utilizes various open-source libraries and modules, including Express, underscore, Throttle, and more. Special thanks to the developers and contributors of these tools.
+5.  Access the application in your browser at `http://localhost:5000` (or the specified port).
 
-### Contributing
+## Usage
 
-Contributions are welcome! If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request.
+- Upon accessing the application, the online radio will start playing a loop of randomly selected songs.
+- Multiple users can connect to the online radio and listen to the broadcast in real-time.
+- The server streams audio data using Node.js streams, ensuring efficient data processing and delivery.
+- You can customize the songs catalogue and implement additional features based on your requirements.
 
-### Authors
+## Contributing
 
-Jackson Kitsao
+Contributions are welcome! If you find any issues or have suggestions for improvements, please create an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](https://chat.openai.com/c/LICENSE).
+
+## Acknowledgments
+
+- This project is inspired by the concept of online radios and the power of Node.js streams.
+- Special thanks to the open-source community for their valuable libraries and resources.
+
+Feel free to update and customize the generated README according to your specific project details, guidelines, and preferences.
