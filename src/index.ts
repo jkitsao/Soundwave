@@ -5,8 +5,8 @@ import Throttle from 'throttle'
 import { PassThrough  } from "stream";
 import cors from 'cors'
 import dotenv from 'dotenv';
-import {generateRandomSong,getBitRate} from './utils/songs'
-import {catalogue} from './utils/testaudio'
+import {generateRandomSong,getBitRate} from './utils/songs.ts'
+import {catalogue} from './utils/testaudio.ts'
 dotenv.config();
 const app: Express = express();
 // cors  middlewares
