@@ -124,7 +124,6 @@ app.get('/', async (req: Request, res: Response) => {
     "Content-Type": "audio/mpeg",
     "Transfer-Encoding": "chunked",
   });
-  // console.log('url hit')
   // Create a response sink using the makeResponseSink function
   const { responseSink } = makeResponseSink();
 

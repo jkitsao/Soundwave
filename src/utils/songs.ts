@@ -32,7 +32,7 @@ export const generateRandomSong = (catalogue: Array<any>): any => {
  * @param {any} song - The song for which to retrieve the bit rate.
  * @returns {Promise<number|string>} A promise that resolves to the bit rate of the song, or a default value if an error occurs.
  */
-export const getBitRate = async (song: any): Promise<number|string> => {
+export const getBitRate = async (song: number | any): Promise<number|string> => {
     // console.log({ song });
   
     try {
